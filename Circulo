@@ -1,0 +1,31 @@
+//comentario simple
+/*
+Autor: Yovani G.
+Descripcion: Circulo
+Date:20-02-2020
+*/
+#include<stdio.h> //Libreria
+#include<math.h>
+
+int main(){   //Funcion principal
+	
+	//Declaracion de variables 
+	int radio; //asignacion de valor
+	float longitud, area, radioCuadrado; //declaracion
+	const float PI = 3.1416; //declaracion de constante
+	
+	//pedir datos a usuario
+	printf("\tDame el radio del circulo a calcular \n");
+	scanf("%d", &radio);
+	
+	radioCuadrado = pow(radio,2);
+	printf("El radio vale:%0.3f\n", radioCuadrado);
+	longitud = (2 * PI) * radio;
+	area = PI * radioCuadrado;
+	
+	printf("La longitud del circulo con radio %d: %0.3f\n",radio, longitud);
+	printf("El area del circulo con radio %d: %0.5f\n", radio, area);
+	
+	return 0;
+	 //fin de programa
+}
