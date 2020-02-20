@@ -1,0 +1,50 @@
+//comentario simple
+/*
+Autor: Yovani G.
+Descripcion: Circulo
+Date:20-02-2020
+*/
+#include<stdio.h> //Libreria
+#include<math.h>
+
+int main(){   //Funcion principal
+	
+	//Declaracion de variables 
+	int radio, opcion, num1, num2; //asignacion de valor
+	float longitud, area, radioCuadrado, raiz, resultado; //declaracion
+	const float PI = 3.1416; //declaracion de constante
+	printf("Que operacion desea hacer?...\n 1.- Suma \n 2.-Resta\n");
+	scanf("%d", &opcion);
+	
+	// Estructura de operacion simple
+	if(opcion==1){//Sumar
+		//Sumando dos numeros
+		printf("\nDame un numero para sumar: ");
+		scanf("%d", &num1);
+		printf("\nDame otro numero para sumar: ");
+		scanf("%d", &num2);
+		printf("\nLa suma de %d + %d es: %d\n",num1, num2, num1+num2);
+	}
+	else{ 
+	
+	//pedir datos a usuario
+	printf("\tDame el radio del circulo a calcular \n");
+	scanf("%d", &radio);
+	
+	radioCuadrado = pow(radio,2);
+	printf("El radio vale:%0.3f\n", radioCuadrado);
+	longitud = (2 * PI) * radio;
+	area = PI * radioCuadrado;
+	
+	printf("La longitud del circulo con radio %d: %0.3f\n",radio, longitud);
+	printf("El area del circulo con radio %d: %0.5f\n", radio, area);
+	
+	printf("Dame un numero para calcular la raiz cuadrada: \n");
+	scanf("%f", &raiz);
+	resultado = sqrt(raiz);
+	printf("\n La raiz cuadrada del numero es : %0.2f", resultado);
+}
+
+	return 0;
+	 //fin de programa
+}
