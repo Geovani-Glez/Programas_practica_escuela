@@ -1,0 +1,63 @@
+//comentario simple
+/*
+Author: Daniel R.
+Descipción: Círculo
+Date: 20-02-2020
+*/
+#include<stdio.h> // Librería
+#include<math.h>
+
+int main(){ //Función principal
+	//Declaración de variables
+	int opcion, radio, raiz, num1, num2;
+	float longitud, area, radioCuadrado; //Declaración
+	const float PI = 3.14159; //Declaración de constante
+	
+	printf("Que operacion deseas:\n\t1.- Suma\n\t2.- Resta\n\t3.- Circulo\n\t4.- Raiz\n\t5.- Modulo\n");
+	scanf("%d", &opcion);
+	
+	/*Estructura de seleccion simple*/
+	if(opcion==1){//Sumar
+		//Sumando dos numeros
+		printf("\nDame un numero para sumar: ");
+		scanf("%d", &num1);
+		printf("\nDame otro numero para sumar: ");
+		scanf("%d", &num2);
+		printf("\nLa suma de %d + %d es: %d\n",num1, num2, num1+num2);
+	}
+	else if(opcion==2){//Restando dos numeros
+		printf("\nDame un numero para restar: ");
+		scanf("%d", &num1);
+		printf("\nDame otro numero para restar: ");
+		scanf("%d", &num2);
+		printf("\nLa resta de %d + %d es: %d\n",num1, num2, num1-num2);	
+	}
+	else if(opcion==3){ //Circulo
+		printf("Dame el radio del circulo que deseas calcular: ");
+		scanf("%d", &radio);	
+		radioCuadrado = pow(radio,2);
+		printf("\nEl radio vale: %0.2f", radioCuadrado) ;
+		longitud = (2 * PI) * radio;
+		area = PI * radioCuadrado;
+		printf("\nLa longitud del circulo con radio %d es: %0.2f",radio, longitud);
+		printf("\nEl area del circulo con radio %d es: %0.2f",radio, area);	
+	}
+	else if(opcion==4){ //Raiz
+		printf("\n\n/******************************************/");
+		printf("\nDame un numero para calcular raiz cuadrada: ");
+		scanf("%d", &raiz);
+		printf("\nLa raiz cuadrada del numero %d es: %0.2f",raiz, sqrt(raiz));	
+	}
+	else if(opcion==5){
+		printf("\n\n/******************************************/");
+		printf("\nDame un numero: ");
+		scanf("%d", &num1);
+		printf("\nDame otro numero: ");
+		scanf("%d", &num2);
+		printf("\nEl modulo de %d / %d es: %d",num1, num2, num1%num2);
+	}
+	else{
+		printf("\nOpcion no valida");
+	}
+	return 0; //Fin de programa
+}
