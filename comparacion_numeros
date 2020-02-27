@@ -1,0 +1,37 @@
+/*
+Description: Mayor de tres números
+Date: 27-02-2020
+*/
+#include<stdio.h>
+int main(){
+	int x, y, z; //Declaración de variables
+	printf("Dame el primer numero: ");
+	scanf("%d",&x);
+	printf("Dame el segundo numero: ");
+	scanf("%d",&y);
+	printf("Dame el tercer numero: ");
+	scanf("%d",&z);
+				
+	if(x==y && y== z){
+			printf("Todos iguales\n");
+			printf("%d == %d == %d",x, y, z);
+	}
+	/*Z mayor*/
+	else if( (x<y && y<z ) || (x==y && y<z ) || (x>y && y<z ) ){
+		printf("Soy un IF\n");
+		printf("%d es mayor %d y %d",z, x, y);
+	}
+	/*Y mayor*/
+	else if( (x<z && z<y) || (x==z && z<y) || (x>z && z<y) ){
+		printf("Soy un ELSE IF\n");
+		printf("%d es mayor %d y %d",y, x, z);
+	}
+	/*X mayor*/
+	else if( (y<z && z<x) || (y==z && z<x) || (y>z && z<x) ){
+		printf("Soy un ELSE IF2\n");
+		printf("%d es mayor %d y %d",x, y, z);
+	}
+	else{
+		printf("Valor incorrecto\n");
+	}
+}
