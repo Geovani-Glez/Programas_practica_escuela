@@ -1,0 +1,30 @@
+/* Comparacion de edades*/
+
+#include <stdio.h>
+
+int main (){
+	
+	int anio;
+	printf("Dame tu frecha de nacimiento...");
+	scanf("%d",&anio);
+	
+	if(anio>= 1945 && anio<= 1965 ){
+		printf("Eres un baby boomber\n");
+		
+}
+	else if(anio>= 1965 && anio<= 1979){
+		if(anio >=1977){
+			printf("Eres un Xenials\n");
+		}
+		else{
+		
+		printf("eres generacion X \n");
+	}
+	}
+	else if(anio>= 1979 && anio<= 1999){
+		printf("eres generacion Y \n");
+}
+	else if(anio>= 1999 && anio<= 1909){
+		printf("eres generacion Z \n");	
+}
+}
