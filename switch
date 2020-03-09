@@ -1,0 +1,64 @@
+include <stdio.h>
+#include <math.h>
+#include <windows.h>
+
+int main()
+{
+	int opcion;
+	float a, b, c;
+
+	
+	
+	printf("Elige una opcion\n");
+	printf("\t 1.- Suma \n");
+	printf("\t 2.- Resta \n");
+	printf("\t 3.- Multiplicacion \n");
+	printf("\t 4.- Divicion \n");
+	printf("\t 5.- Potencia \n");
+	printf("\t 6.- Raiz cuadrada \n");
+	printf("\t 7.- salir \n");
+	scanf("%d, opcion");
+	
+	system("cls");
+	if(opcion ==6){
+		printf("\n Dame solo un valor: ");
+		scanf("%f", &a);
+	}else if(opcion)   {
+	
+	
+		printf("Dame tu primer numero\n");
+		scanf("%f", &a);
+		printf("Dame tu segundo numero\n");
+		scanf("%f", &b);
+}
+	
+	
+	switch(opcion)
+	{
+		case 1:
+			printf("La suma es...\n");
+			c = a + b;
+			printf("%f", c);
+			break;
+		case 2:
+			printf("La resta es...\n");
+			c = a - b;
+			printf("%f", c);
+			break;
+		case 3:
+			printf("Soy una division");
+			break;
+		case 4:
+			printf("Soy una multiplicacion");
+			break;
+		case 5:
+			printf("Potencia");
+			break;
+		case 6:
+			printf("Raiz");
+			break;
+		default:
+			printf("estas saliendo...");
+			exit(0);
+	}
+}
