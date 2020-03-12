@@ -1,4 +1,4 @@
-include <stdio.h>
+#include <stdio.h>
 #include <math.h>
 #include <windows.h>
 
@@ -17,15 +17,13 @@ int main()
 	printf("\t 5.- Potencia \n");
 	printf("\t 6.- Raiz cuadrada \n");
 	printf("\t 7.- salir \n");
-	scanf("%d, opcion");
+	scanf("%d", opcion);
 	
 	system("cls");
-	if(opcion ==6){
+	if(opcion == 6){
 		printf("\n Dame solo un valor: ");
 		scanf("%f", &a);
 	}else if(opcion)   {
-	
-	
 		printf("Dame tu primer numero\n");
 		scanf("%f", &a);
 		printf("Dame tu segundo numero\n");
@@ -47,6 +45,13 @@ int main()
 			break;
 		case 3:
 			printf("Soy una division");
+			if (b == 0){
+				printf("No se puede dividir entre 0");
+			}
+			else {
+				c = a / b;
+				printf("%f", c);
+			}
 			break;
 		case 4:
 			printf("Soy una multiplicacion");
