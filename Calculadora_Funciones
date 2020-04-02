@@ -1,0 +1,123 @@
+//Calculadora con funciones
+#include <stdio.h>
+#include <math.h>
+#include <stdlib.h>
+
+void suma();
+void resta();
+void multiplica();
+void divide();
+void potencia();
+void raiz();
+
+float a, b, c;
+double z;
+
+
+int main()
+{
+	int opcion;
+	
+	do{
+	getchar();
+	system("clear");
+	printf("Elige una opcion\n");
+	printf("\t 1.- Suma \n");
+	printf("\t 2.- Resta \n");
+	printf("\t 3.- Divicion \n");
+	printf("\t 4.- Multiplicacion \n");
+	printf("\t 5.- Potencia \n");
+	printf("\t 6.- Raiz cuadrada \n");
+	printf("\t 7.- salir \n");
+	scanf("%d", & opcion);
+	
+	system("clear");
+	if(opcion == 6){
+	printf("Dame solo un valor para la raiz: \n");
+	scanf("%f", &a);
+			}
+	else if(opcion < 6)   {
+		printf("Dame tu primer numero\n");
+		scanf("%f", &a);
+		printf("Dame tu segundo numero\n");
+		scanf("%f", &b);
+				}
+	
+	
+switch (opcion)
+	{
+case 1: 
+	suma();	
+	break;
+case 2:
+	resta();
+	break;
+case 3:
+	divide();
+	break;
+case 4:
+	multiplica();
+	break;
+case 5:
+	potencia();
+	break;
+case 6:
+	raiz();
+	break;
+case 7:
+	printf("Adios...\n");
+	exit(0);
+	break;
+default:
+	printf("Elige una opcion del 1 al 7 \n");
+	getchar();
+	break;
+}
+}
+while(opcion<10);
+
+}
+void suma(){
+	c = a + b;			
+	printf("La suma es...\n");
+	printf("%.02f", c);
+	getchar();
+	return;
+	}
+void resta(){
+	c = a - b;			
+	printf("La resta es...\n");
+	printf("%.02f", c);
+	getchar();
+	return;
+	}
+void divide(){
+	if (b == 0){
+	printf("No se puede dividir entre 0\n");
+	getchar();
+		}
+	else {
+	c = a / b;
+	printf("El resultado es...");
+	printf("%.02f", c);
+	getchar();
+		}
+	}
+void multiplica(){
+	printf("El resultado es...");
+	c = a * b;
+	printf("%.02f", c);
+	getchar();
+	}
+void potencia(){
+	printf("El resultado es...");
+	z = pow (a, b); 
+	printf("%.02f", z);
+	getchar();
+	}
+void raiz(){
+	printf("El resultado de la Raiz es...");
+	z = sqrt(a);
+	printf("%.04f", z);
+	getchar();
+	}
