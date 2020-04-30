@@ -21,7 +21,6 @@ int i, numero=0;
     int opcion;
     
     do{
-	getchar();
 	system("clear");
 	printf("Que desea hacer...? \n");
 	printf("\t 1.- Agregar un Registro \n");
@@ -87,7 +86,7 @@ return;
 void buscar(){
 printf("Que registro deseas buscar?");
 scanf("%d", & i);
-printf("Registro:%d\n\tNombre:%s\tEdad:%d\n\tCiudad:%s", i, persona[i].nombre, persona[i].edad, persona[i].ciudad);   
+printf("Registro:%d\n\tNombre:%s\tEdad:%d\n\tCiudad:%s", i, persona[i-1].nombre, persona[i-1].edad, persona[i-1].ciudad);   
 getchar();
 return;
 }
